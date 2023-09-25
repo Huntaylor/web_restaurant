@@ -14,13 +14,13 @@ class OptionsModel extends Equatable {
     this.comesWith,
   });
 
+  factory OptionsModel.fromJson(Map<String, dynamic> json) =>
+      _$OptionsModelFromJson(json);
+
   final String? name;
   final String? price;
   final String? comesWith;
   final CombosModel? combos;
-
-  factory OptionsModel.fromJson(Map<String, dynamic> json) =>
-      _$OptionsModelFromJson(json);
 
   @override
   List<Object?> get props => _$props;
@@ -34,11 +34,11 @@ class CombosModel extends Equatable {
     this.price,
   });
 
-  final String? type;
-  final String? price;
-
   factory CombosModel.fromJson(Map<String, dynamic> json) =>
       _$CombosModelFromJson(json);
+
+  final String? type;
+  final String? price;
 
   @override
   List<Object?> get props => _$props;

@@ -13,15 +13,16 @@ class MenuTypesModel extends Equatable {
     this.overallCombos,
     this.overallPrice,
     this.upgrades, {
-    this.options,
+    this.types,
   });
-  final OptionsModel? options;
+
+  factory MenuTypesModel.fromJson(Map<String, dynamic> json) =>
+      _$MenuTypesModelFromJson(json);
+  final List<OptionsModel?>? types;
   final String? servedWith;
   final List<CombosModel>? overallCombos;
   final String? overallPrice;
-  final Map<String?, dynamic> upgrades;
-
-  factory MenuTypesModel.fromJson(Map json) => _$MenuTypesModelFromJson(json);
+  final Map<String, dynamic>? upgrades;
 
   @override
   List<Object?> get props => _$props;
