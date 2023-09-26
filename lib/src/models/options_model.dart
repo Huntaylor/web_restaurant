@@ -20,7 +20,7 @@ class Options extends Equatable {
   final String? name;
   final String? price;
   final String? comesWith;
-  final Combos? combos;
+  final List<Combos>? combos;
 
   @override
   List<Object?> get props => _$props;

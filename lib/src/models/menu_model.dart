@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:web_restaurant/src/models/menu_types_model.dart';
 
-part 'appetizers_model.g.dart';
+part 'menu_model.g.dart';
 
 @JsonSerializable()
 @autoequal
@@ -12,7 +12,6 @@ class Menu extends Equatable {
 
   factory Menu.fromJson(Map<String, dynamic> json) => _$MenuFromJson(json);
   final Map<String, MenuTypes> data;
-
 
   @override
   List<Object?> get props => _$props;

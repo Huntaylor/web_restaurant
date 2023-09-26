@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:web_restaurant/src/data/dart_mock_data.dart';
 import 'package:web_restaurant/src/features/cubit/home_cubit.dart';
-import 'package:web_restaurant/src/models/menu_items.dart';
 import 'package:web_restaurant/src/widgets/overview_widget.dart';
 
 class HomeView extends StatelessWidget {
@@ -23,9 +21,9 @@ class HomeView extends StatelessWidget {
           itemBuilder: (context, index) {
             final nameList = state.asInitial.menu.data.keys.toList();
             final menuItems = state.asInitial.menu.data.values.toList();
-            final theIndex = menuItems[index];
             return OverviewWidget(
               title: nameList[index],
+              types: menuItems[index],
             );
           },
         ),

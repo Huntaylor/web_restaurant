@@ -25,9 +25,9 @@ extension _$CombosAutoequal on Combos {
 Options _$OptionsFromJson(Map<String, dynamic> json) => Options(
       name: json['name'] as String?,
       price: json['price'] as String?,
-      combos: json['combos'] == null
-          ? null
-          : Combos.fromJson(json['combos'] as Map<String, dynamic>),
+      combos: (json['combos'] as List<dynamic>?)
+          ?.map((e) => Combos.fromJson(e as Map<String, dynamic>))
+          .toList(),
       comesWith: json['comesWith'] as String?,
     );
 

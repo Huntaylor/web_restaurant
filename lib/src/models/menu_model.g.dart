@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'appetizers_model.dart';
+part of 'menu_model.dart';
 
 // **************************************************************************
 // AutoequalGenerator

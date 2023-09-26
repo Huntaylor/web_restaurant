@@ -10,7 +10,7 @@ extension _$MenuTypesAutoequal on MenuTypes {
   @Deprecated(r'Use _$props instead')
   List<Object?> get _autoequalProps => _$props;
   List<Object?> get _$props =>
-      [types, servedWith, overallCombos, overallPrice, upgrades];
+      [options, servedWith, overallCombos, overallPrice, upgrades];
 }
 
 // **************************************************************************
@@ -24,14 +24,14 @@ MenuTypes _$MenuTypesFromJson(Map<String, dynamic> json) => MenuTypes(
           .toList(),
       overallPrice: json['overallPrice'] as String?,
       upgrades: json['upgrades'] as Map<String, dynamic>?,
-      types: (json['types'] as List<dynamic>?)
+      options: (json['options'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Options.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$MenuTypesToJson(MenuTypes instance) => <String, dynamic>{
-      'types': instance.types,
+      'options': instance.options,
       'servedWith': instance.servedWith,
       'overallCombos': instance.overallCombos,
       'overallPrice': instance.overallPrice,

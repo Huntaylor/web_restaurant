@@ -23,7 +23,7 @@ class HomeInitial extends HomeState {
     for (final item in menu.data.entries) {
       print(item.key); // entrees
       print(item.value); //MenuType
-      for (final type in item.value.types ?? <Options>[]) {
+      for (final type in item.value.options ?? <Options>[]) {
         print(type?.name);
       }
     }

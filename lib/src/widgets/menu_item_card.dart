@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:web_restaurant/src/models/menu_items.dart';
+import 'package:web_restaurant/src/models/options_model.dart';
 import 'package:web_restaurant/src/widgets/combos_widget.dart';
 
 class MenuItemCard extends StatelessWidget {
@@ -9,7 +9,7 @@ class MenuItemCard extends StatelessWidget {
     super.key,
   });
 
-  final MenuType type;
+  final Options type;
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,8 @@ class MenuItemCard extends StatelessWidget {
         Visibility(
           visible: type.combos != null && type.combos!.isNotEmpty,
           child: CombosWidget(
-            price: type.combos![0].comboPrice!,
-            type: type.combos![0].comboType!,
+            price: type.combos![0].price!,
+            type: type.combos![0].type!,
           ),
         ),
       ],

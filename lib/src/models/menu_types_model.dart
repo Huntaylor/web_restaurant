@@ -13,12 +13,12 @@ class MenuTypes extends Equatable {
     this.overallCombos,
     this.overallPrice,
     this.upgrades,
-    this.types,
+    this.options,
   });
 
   factory MenuTypes.fromJson(Map<String, dynamic> json) =>
       _$MenuTypesFromJson(json);
-  final List<Options?>? types;
+  final List<Options?>? options;
   final String? servedWith;
   final List<Combos>? overallCombos;
   final String? overallPrice;
