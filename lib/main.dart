@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:web_restaurant/src/features/cubit/home_cubit.dart';
-import 'package:web_restaurant/src/home.dart';
+import 'package:web_restaurant/src/features/views/home.dart';
 
 void main() {
   runApp(const MyApp());

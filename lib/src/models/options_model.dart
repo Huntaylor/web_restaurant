@@ -6,21 +6,21 @@ part 'options_model.g.dart';
 
 @JsonSerializable()
 @autoequal
-class OptionsModel extends Equatable {
-  const OptionsModel({
+class Options extends Equatable {
+  const Options({
     this.name,
     this.price,
     this.combos,
     this.comesWith,
   });
 
-  factory OptionsModel.fromJson(Map<String, dynamic> json) =>
-      _$OptionsModelFromJson(json);
+  factory Options.fromJson(Map<String, dynamic> json) =>
+      _$OptionsFromJson(json);
 
   final String? name;
   final String? price;
   final String? comesWith;
-  final CombosModel? combos;
+  final Combos? combos;
 
   @override
   List<Object?> get props => _$props;
@@ -28,14 +28,13 @@ class OptionsModel extends Equatable {
 
 @JsonSerializable()
 @autoequal
-class CombosModel extends Equatable {
-  const CombosModel({
+class Combos extends Equatable {
+  const Combos({
     this.type,
     this.price,
   });
 
-  factory CombosModel.fromJson(Map<String, dynamic> json) =>
-      _$CombosModelFromJson(json);
+  factory Combos.fromJson(Map<String, dynamic> json) => _$CombosFromJson(json);
 
   final String? type;
   final String? price;

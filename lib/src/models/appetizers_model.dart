@@ -7,12 +7,12 @@ part 'appetizers_model.g.dart';
 
 @JsonSerializable()
 @autoequal
-class AppetizersModel extends Equatable {
-  const AppetizersModel({required this.appetizers});
+class Menu extends Equatable {
+  const Menu({required this.data});
 
-  factory AppetizersModel.fromJson(Map<String, dynamic> json) =>
-      _$AppetizersModelFromJson(json);
-  final MenuTypesModel appetizers;
+  factory Menu.fromJson(Map<String, dynamic> json) => _$MenuFromJson(json);
+  final Map<String, MenuTypes> data;
+
 
   @override
   List<Object?> get props => _$props;

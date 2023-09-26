@@ -7,20 +7,20 @@ part 'menu_types_model.g.dart';
 
 @JsonSerializable()
 @autoequal
-class MenuTypesModel extends Equatable {
-  const MenuTypesModel(
+class MenuTypes extends Equatable {
+  const MenuTypes({
     this.servedWith,
     this.overallCombos,
     this.overallPrice,
-    this.upgrades, {
+    this.upgrades,
     this.types,
   });
 
-  factory MenuTypesModel.fromJson(Map<String, dynamic> json) =>
-      _$MenuTypesModelFromJson(json);
-  final List<OptionsModel?>? types;
+  factory MenuTypes.fromJson(Map<String, dynamic> json) =>
+      _$MenuTypesFromJson(json);
+  final List<Options?>? types;
   final String? servedWith;
-  final List<CombosModel>? overallCombos;
+  final List<Combos>? overallCombos;
   final String? overallPrice;
   final Map<String, dynamic>? upgrades;
 

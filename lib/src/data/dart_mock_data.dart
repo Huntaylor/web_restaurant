@@ -1,7 +1,7 @@
 // ignore_for_file: inference_failure_on_collection_literal, lines_longer_than_80_chars
 
 final Map<String, dynamic> mockData = {
-  'appetizers': {
+  'APPETIZERS': {
     'upgrades': null,
     'servedWith': '',
     'overallCombos': [],
@@ -39,7 +39,7 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'entrees': {
+  'ENTREES': {
     'upgrades': null,
     'servedWith': '',
     'overallCombos': [],
@@ -73,7 +73,7 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'sandwiches': {
+  'SANDWICHES': {
     'servedWith':
         'Served with choice of house pasta salad, green salad, or fresh fruit.',
     'overallCombos': [],
@@ -85,7 +85,7 @@ final Map<String, dynamic> mockData = {
     },
     'types': [],
   },
-  'cold': {
+  'COLD': {
     'servedWith': 'Choice of sourdough, whole wheat, or rye bread',
     'overallCombos': [
       {'type': 'half sandwich', 'price': '7.95'},
@@ -118,7 +118,7 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'hot': {
+  'HOT': {
     'servedWith': 'Choice of whole wheat or cheese & onion bun',
     'overallCombos': [],
     'overallPrice': '',
@@ -177,7 +177,7 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'soupsSalads': {
+  'SOUP & SALAD COMBOS': {
     'upgrades': null,
     'servedWith': '',
     'overallCombos': [],
@@ -197,7 +197,7 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'fajitas': {
+  'FAJITAS': {
     'servedWith':
         'Served with red rice, black beans, grilled tomato salad, choice of corn or flour tortillas',
     'overallCombos': [],
@@ -219,7 +219,7 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'tacos': {
+  'TACOS': {
     'servedWith':
         'Served with red rice, black beans, corn & romaine salad, tortilla chips',
     'overallCombos': [],
@@ -254,7 +254,7 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'enchiladas': {
+  'ENCHILADAS': {
     'upgrades': null,
     'servedWith': '',
     'overallCombos': [
@@ -279,7 +279,7 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'quiche': {
+  'QUICHE': {
     'upgrades': null,
     'servedWith': 'Choice of Fresh Fruit or Green Salad',
     'overallCombos': [],
@@ -293,7 +293,7 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'greenSalads': {
+  'GREEN SALADS': {
     'upgrades': null,
     'servedWith': '',
     'overallCombos': [],

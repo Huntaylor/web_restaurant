@@ -6,7 +6,7 @@ part of 'menu_types_model.dart';
 // AutoequalGenerator
 // **************************************************************************
 
-extension _$MenuTypesModelAutoequal on MenuTypesModel {
+extension _$MenuTypesAutoequal on MenuTypes {
   @Deprecated(r'Use _$props instead')
   List<Object?> get _autoequalProps => _$props;
   List<Object?> get _$props =>
@@ -17,23 +17,20 @@ extension _$MenuTypesModelAutoequal on MenuTypesModel {
 // JsonSerializableGenerator
 // **************************************************************************
 
-MenuTypesModel _$MenuTypesModelFromJson(Map<String, dynamic> json) =>
-    MenuTypesModel(
-      json['servedWith'] as String?,
-      (json['overallCombos'] as List<dynamic>?)
-          ?.map((e) => CombosModel.fromJson(e as Map<String, dynamic>))
+MenuTypes _$MenuTypesFromJson(Map<String, dynamic> json) => MenuTypes(
+      servedWith: json['servedWith'] as String?,
+      overallCombos: (json['overallCombos'] as List<dynamic>?)
+          ?.map((e) => Combos.fromJson(e as Map<String, dynamic>))
           .toList(),
-      json['overallPrice'] as String?,
-      json['upgrades'] as Map<String, dynamic>?,
+      overallPrice: json['overallPrice'] as String?,
+      upgrades: json['upgrades'] as Map<String, dynamic>?,
       types: (json['types'] as List<dynamic>?)
-          ?.map((e) => e == null
-              ? null
-              : OptionsModel.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Options.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$MenuTypesModelToJson(MenuTypesModel instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$MenuTypesToJson(MenuTypes instance) => <String, dynamic>{
       'types': instance.types,
       'servedWith': instance.servedWith,
       'overallCombos': instance.overallCombos,

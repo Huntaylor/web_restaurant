@@ -15,70 +15,20 @@ class HomeInitial extends HomeState {
 
   final Map<String, dynamic> mockData;
 
-  AppetizersModel get appetizers {
-    return AppetizersModel.fromJson(
-      mockData,
+  Menu get menu {
+    final menu = Menu.fromJson(
+      {'data': mockData},
     );
-  }
 
-  EntreesModel get entrees {
-    return EntreesModel.fromJson(
-      mockData,
-    );
-  }
+    for (final item in menu.data.entries) {
+      print(item.key); // entrees
+      print(item.value); //MenuType
+      for (final type in item.value.types ?? <Options>[]) {
+        print(type?.name);
+      }
+    }
 
-  SandwichesModel get sandwichesOverview {
-    return SandwichesModel.fromJson(
-      mockData,
-    );
-  }
-
-  ColdSandwichModel get coldSandwiches {
-    return ColdSandwichModel.fromJson(
-      mockData,
-    );
-  }
-
-  HotSandwichModel get hotSandwiches {
-    return HotSandwichModel.fromJson(
-      mockData,
-    );
-  }
-
-  SoupAndSaladsModel get soupAndSalads {
-    return SoupAndSaladsModel.fromJson(
-      mockData,
-    );
-  }
-
-  FajitasModel get fajitas {
-    return FajitasModel.fromJson(
-      mockData,
-    );
-  }
-
-  TacosModel get tacos {
-    return TacosModel.fromJson(
-      mockData,
-    );
-  }
-
-  EnchiladasModel get enchiladas {
-    return EnchiladasModel.fromJson(
-      mockData,
-    );
-  }
-
-  QuicheModel get quiche {
-    return QuicheModel.fromJson(
-      mockData,
-    );
-  }
-
-  GreenSaladsModel get greenSalads {
-    return GreenSaladsModel.fromJson(
-      mockData,
-    );
+    return menu;
   }
 
   @override
