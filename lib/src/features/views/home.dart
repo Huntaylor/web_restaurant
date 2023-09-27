@@ -16,16 +16,22 @@ class HomeView extends StatelessWidget {
         appBar: AppBar(
           title: const Text(title),
         ),
-        body: ListView.builder(
-          itemCount: state.asInitial.menu.data.length,
-          itemBuilder: (context, index) {
-            final nameList = state.asInitial.menu.data.keys.toList();
-            final menuItems = state.asInitial.menu.data.values.toList();
-            return OverviewWidget(
-              title: nameList[index],
-              types: menuItems[index],
-            );
-          },
+        body: SafeArea(
+          child: ListView.builder(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            itemCount: state.asInitial.menu.data.length,
+            itemBuilder: (context, index) {
+              final nameList = state.asInitial.menu.data.keys.toList();
+              final menuItems = state.asInitial.menu.data.values.toList();
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: OverviewWidget(
+                  title: nameList[index],
+                  types: menuItems[index],
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

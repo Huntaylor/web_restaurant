@@ -13,19 +13,55 @@ class MenuItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(type.name!),
-        Text(type.price!),
-        Text(type.comesWith!),
-        Visibility(
-          visible: type.combos != null && type.combos!.isNotEmpty,
-          child: CombosWidget(
-            price: type.combos![0].price!,
-            type: type.combos![0].type!,
-          ),
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white60,
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: Column(
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('Type:'),
+                const SizedBox(
+                  width: 5,
+                ),
+                Flexible(child: Text(type.name!)),
+              ],
+            ),
+            if (type.price != null)
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('Price:'),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Text(type.price!),
+                ],
+              ),
+            if (type.comesWith != null)
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('Comes With:'),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  Flexible(child: Text(type.comesWith!)),
+                ],
+              ),
+            if (type.combos != null)
+              CombosWidget(
+                price: type.combos![0].price!,
+                type: type.combos![0].type!,
+              ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

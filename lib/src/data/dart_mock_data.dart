@@ -3,10 +3,10 @@
 final Map<String, dynamic> mockData = {
   'APPETIZERS': {
     'upgrades': null,
-    'servedWith': '',
+    'servedWith': null,
     'overallCombos': [],
-    'overallPrice': '',
-    'types': [
+    'overallPrice': null,
+    'options': [
       {
         'name': 'Iceberg Wedge Salad with House Cured Bacon',
         'price': '7.50',
@@ -41,10 +41,10 @@ final Map<String, dynamic> mockData = {
   },
   'ENTREES': {
     'upgrades': null,
-    'servedWith': '',
+    'servedWith': null,
     'overallCombos': [],
-    'overallPrice': '',
-    'types': [
+    'overallPrice': null,
+    'options': [
       {
         'name': 'Farfalle Pasta with Braised Pork in Tomato Cream',
         'price': '12.95',
@@ -77,13 +77,13 @@ final Map<String, dynamic> mockData = {
     'servedWith':
         'Served with choice of house pasta salad, green salad, or fresh fruit.',
     'overallCombos': [],
-    'overallPrice': '',
+    'overallPrice': null,
     'upgrades': {
       'price': '1.50',
       'details':
           '(by substituting) to ½ pasta salad of the day, French onion soup or soup of the day.',
     },
-    'types': [],
+    'options': [],
   },
   'COLD': {
     'servedWith': 'Choice of sourdough, whole wheat, or rye bread',
@@ -91,29 +91,29 @@ final Map<String, dynamic> mockData = {
       {'type': 'half sandwich', 'price': '7.95'},
       {'type': 'full sandwich', 'price': '7.95'},
     ],
-    'types': [
+    'options': [
       {
         'name': 'Turkey & Avocado',
         'comesWith': 'with tomato',
-        'price': '',
+        'price': null,
         'combos': null,
       },
       {
         'name': 'Pub Club',
         'comesWith': 'turkey, bacon. lettuce, tomato',
-        'price': '',
+        'price': null,
         'combos': null,
       },
       {
         'name': 'Rare Roast Beef & Swiss',
         'comesWith': 'sweet-hot mustard, lettuce, red onion',
-        'price': '',
+        'price': null,
         'combos': null,
       },
       {
         'name': 'Veggie',
         'comesWith': 'pepper jack, avocado, sprout, tomato',
-        'price': '',
+        'price': null,
         'combos': null,
       }
     ],
@@ -121,8 +121,8 @@ final Map<String, dynamic> mockData = {
   'HOT': {
     'servedWith': 'Choice of whole wheat or cheese & onion bun',
     'overallCombos': [],
-    'overallPrice': '',
-    'types': [
+    'overallPrice': null,
+    'options': [
       {
         'name':
             'Southwest Chicken Breast Grilled Onion, Poblano Pepper, Tomato, Lettuce, Jack Cheese',
@@ -179,10 +179,10 @@ final Map<String, dynamic> mockData = {
   },
   'SOUP & SALAD COMBOS': {
     'upgrades': null,
-    'servedWith': '',
+    'servedWith': null,
     'overallCombos': [],
-    'overallPrice': '',
-    'types': [
+    'overallPrice': null,
+    'options': [
       {
         'name': 'French Onion or Soup of the Day',
         'price': '4.95',
@@ -202,7 +202,7 @@ final Map<String, dynamic> mockData = {
         'Served with red rice, black beans, grilled tomato salad, choice of corn or flour tortillas',
     'overallCombos': [],
     'overallPrice': '10.95',
-    'types': [
+    'options': [
       {
         'name':
             'Sirloin Steak, Onions, Poblano and Bell Peppers, Carrots, Onion, Guacamole, Two Salsas',
@@ -224,46 +224,46 @@ final Map<String, dynamic> mockData = {
         'Served with red rice, black beans, corn & romaine salad, tortilla chips',
     'overallCombos': [],
     'overallPrice': '9.95',
-    'types': [
+    'options': [
       {
         'name':
             'Beer Battered Fish with Jalapeño Remoulade, Roasted Salsa, Cabbage',
-        'price': '',
-        'comesWith': '',
+        'price': null,
+        'comesWith': null,
         'combos': null,
       },
       {
         'name':
             'Carne Asada (marinated sirloin) with Guacamole, Tomatillo Salsa',
-        'price': '',
-        'comesWith': '',
+        'price': null,
+        'comesWith': null,
         'combos': null,
       },
       {
         'name': 'Citrus Marinated Chicken with Guacamole, Tomatillo Salsa',
-        'price': '',
-        'comesWith': '',
+        'price': null,
+        'comesWith': null,
         'combos': null,
       },
       {
         'name':
             'Grilled Veggie with Zucchini, Yellow Squash, Bell Peppers, Onion, Guacamole, Tomatillo Salsa',
-        'price': '',
-        'comesWith': '',
+        'price': null,
+        'comesWith': null,
         'combos': null,
       }
     ],
   },
   'ENCHILADAS': {
     'upgrades': null,
-    'servedWith': '',
+    'servedWith': null,
     'overallCombos': [
       {'name': 'uno', 'price': '8.50'},
       {'name': 'dos', 'price': '9.95'},
       {'name': 'tres', 'price': '11.50'},
     ],
-    'overallPrice': '',
-    'types': [
+    'overallPrice': null,
+    'options': [
       {
         'name':
             'Chili Relleno Stuffed with Jack Cheese &amp; Corn Glazed Yam, Chayote Squash Succotash, Red Chili Sauce',
@@ -284,7 +284,7 @@ final Map<String, dynamic> mockData = {
     'servedWith': 'Choice of Fresh Fruit or Green Salad',
     'overallCombos': [],
     'overallPrice': '8.95',
-    'types': [
+    'options': [
       {
         'name': 'Bacon, Swiss, Mushroom, Zucchini and Mushroom',
         'price': null,
@@ -295,10 +295,10 @@ final Map<String, dynamic> mockData = {
   },
   'GREEN SALADS': {
     'upgrades': null,
-    'servedWith': '',
+    'servedWith': null,
     'overallCombos': [],
-    'overallPrice': '',
-    'types': [
+    'overallPrice': null,
+    'options': [
       {
         'name':
             'Grilled Red Trout Lentils, Tomatoes, Cukes, Green Beans, Red Bells, Almonds, Sundried Tomato Vinaigrette',
