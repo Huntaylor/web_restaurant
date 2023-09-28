@@ -2,6 +2,7 @@ import 'package:autoequal/autoequal.dart';
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:web_restaurant/src/models/options_model.dart';
+import 'package:web_restaurant/src/models/upgrades_model.dart';
 
 part 'menu_types_model.g.dart';
 
@@ -22,7 +23,7 @@ class MenuTypes extends Equatable {
   final String? servedWith;
   final List<Combos>? overallCombos;
   final String? overallPrice;
-  final Map<String, dynamic>? upgrades;
+  final Upgrades? upgrades;
 
   @override
   List<Object?> get props => _$props;

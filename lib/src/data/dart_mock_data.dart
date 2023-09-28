@@ -73,20 +73,14 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'SANDWICHES': {
+  'COLD SANDWICHES': {
     'servedWith':
-        'Served with choice of house pasta salad, green salad, or fresh fruit.',
-    'overallCombos': [],
-    'overallPrice': null,
+        'Choice of sourdough, whole wheat, or rye bread. Served with choice of house pasta salad, green salad, or fresh fruit.',
     'upgrades': {
       'price': '1.50',
       'details':
           '(by substituting) to ½ pasta salad of the day, French onion soup or soup of the day.',
     },
-    'options': [],
-  },
-  'COLD': {
-    'servedWith': 'Choice of sourdough, whole wheat, or rye bread',
     'overallCombos': [
       {'type': 'half sandwich', 'price': '7.95'},
       {'type': 'full sandwich', 'price': '7.95'},
@@ -118,9 +112,18 @@ final Map<String, dynamic> mockData = {
       }
     ],
   },
-  'HOT': {
-    'servedWith': 'Choice of whole wheat or cheese & onion bun',
-    'overallCombos': [],
+  'HOT SANDWICHES': {
+    'servedWith':
+        'Choice of whole wheat or cheese & onion bun. Served with choice of house pasta salad, green salad, or fresh fruit.',
+    'upgrades': {
+      'price': '1.50',
+      'details':
+          '(by substituting) to ½ pasta salad of the day, French onion soup or soup of the day.',
+    },
+    'overallCombos': [
+      {'type': 'half sandwich', 'price': '7.95'},
+      {'type': 'full sandwich', 'price': '7.95'},
+    ],
     'overallPrice': null,
     'options': [
       {

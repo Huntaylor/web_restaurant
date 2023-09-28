@@ -11,3 +11,9 @@ extension _$HomeInitialAutoequal on HomeInitial {
   List<Object?> get _autoequalProps => _$props;
   List<Object?> get _$props => [mockData];
 }
+
+extension _$HomeItemStateAutoequal on HomeItemState {
+  @Deprecated(r'Use _$props instead')
+  List<Object?> get _autoequalProps => _$props;
+  List<Object?> get _$props => [title, type];
+}

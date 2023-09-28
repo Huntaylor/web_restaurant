@@ -23,7 +23,9 @@ MenuTypes _$MenuTypesFromJson(Map<String, dynamic> json) => MenuTypes(
           ?.map((e) => Combos.fromJson(e as Map<String, dynamic>))
           .toList(),
       overallPrice: json['overallPrice'] as String?,
-      upgrades: json['upgrades'] as Map<String, dynamic>?,
+      upgrades: json['upgrades'] == null
+          ? null
+          : Upgrades.fromJson(json['upgrades'] as Map<String, dynamic>),
       options: (json['options'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Options.fromJson(e as Map<String, dynamic>))
