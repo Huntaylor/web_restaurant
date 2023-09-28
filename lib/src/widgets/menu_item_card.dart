@@ -23,9 +23,16 @@ class MenuItemCard extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         child: Column(
           children: [
-            Text(type.name!),
-            if (type.price != null) Text(type.price!),
-            if (type.comesWith != null) Text('Comes With:${type.comesWith!}'),
+            Text(
+              type.name!,
+              textAlign: TextAlign.center,
+            ),
+            if (type.price != null) Text('\$${type.price!}'),
+            if (type.comesWith != null)
+              Text(
+                'Comes with: ${type.comesWith!}',
+                textAlign: TextAlign.center,
+              ),
             if (type.combos != null)
               CombosWidget(
                 price: type.combos![0].price!,
