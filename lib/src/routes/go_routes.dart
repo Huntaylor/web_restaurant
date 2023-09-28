@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:web_restaurant/src/features/views/home/home_view.dart';
+import 'package:web_restaurant/src/features/views/home/menu_view.dart';
 import 'package:web_restaurant/src/features/views/menu_item/menu_item_view.dart';
 import 'package:web_restaurant/src/routes/paths.dart';
 
@@ -8,7 +8,7 @@ final goRoutes = GoRouter(
   routes: [
     GoRoute(
       path: Paths.home.goRoute,
-      builder: (_, __) => const HomeView(),
+      builder: (_, __) => const MenuView(),
       routes: [
         GoRoute(
           path: Paths.home.menuItemView.goRoute,

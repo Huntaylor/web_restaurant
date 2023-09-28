@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:web_restaurant/main.dart';
-import 'package:web_restaurant/src/features/cubit/home_cubit.dart';
+import 'package:web_restaurant/src/features/cubit/menu_cubit.dart';
 import 'package:web_restaurant/src/widgets/menu_item_card.dart';
 
 class MenuItemView extends StatelessWidget {
@@ -12,17 +12,20 @@ class MenuItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final firstController = ScrollController();
-    return BlocBuilder<HomeCubit, HomeState>(
+    return BlocBuilder<MenuCubit, MenuState>(
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
             title: Hero(
               tag: state.asMenuItem.title,
-              child: SizedBox(
+              child: Container(
+                color: context.theme.colorScheme.primary,
                 width: 250,
                 child: Text(
                   state.asMenuItem.title,
-                  style: Theme.of(context).textTheme.titleMedium,
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: context.theme.colorScheme.onPrimary,
+                      ),
                   textAlign: TextAlign.center,
                 ),
               ),

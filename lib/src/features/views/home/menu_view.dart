@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:web_restaurant/src/features/cubit/home_cubit.dart';
+import 'package:web_restaurant/src/features/cubit/menu_cubit.dart';
 import 'package:web_restaurant/src/routes/paths.dart';
 import 'package:web_restaurant/src/widgets/overview_widget.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class MenuView extends StatelessWidget {
+  const MenuView({super.key});
 
   @override
   Widget build(BuildContext context) {
     final firstController = ScrollController();
-    return BlocBuilder<HomeCubit, HomeState>(
+    return BlocBuilder<MenuCubit, MenuState>(
       buildWhen: (_, state) {
         return state.isInitial;
       },
@@ -38,7 +38,7 @@ class HomeView extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   child: GestureDetector(
                     onTap: () {
-                      mainContext.read<HomeCubit>().selectItem(
+                      mainContext.read<MenuCubit>().selectItem(
                             title: nameList[index],
                             type: menuItems[index],
                           );

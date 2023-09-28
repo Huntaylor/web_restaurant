@@ -22,10 +22,9 @@ class MenuItemCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Type: ${type.name!}'),
-            if (type.price != null) Text('Price: ${type.price!}'),
+            Text(type.name!),
+            if (type.price != null) Text(type.price!),
             if (type.comesWith != null) Text('Comes With:${type.comesWith!}'),
             if (type.combos != null)
               CombosWidget(

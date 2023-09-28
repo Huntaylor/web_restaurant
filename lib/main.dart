@@ -1,7 +1,7 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:web_restaurant/src/features/cubit/home_cubit.dart';
+import 'package:web_restaurant/src/features/cubit/menu_cubit.dart';
 import 'package:web_restaurant/src/routes/go_routes.dart';
 
 void main() {
@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
     const usedScheme = FlexScheme.bahamaBlue;
     return MultiBlocProvider(
       providers: [
-        BlocProvider<HomeCubit>(
-          create: (context) => HomeCubit(),
+        BlocProvider<MenuCubit>(
+          create: (context) => MenuCubit(),
         ),
       ],
       child: MaterialApp.router(
