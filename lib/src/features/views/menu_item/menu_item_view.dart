@@ -13,6 +13,7 @@ class MenuItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final firstController = ScrollController();
+
     return BlocBuilder<MenuCubit, MenuState>(
       builder: (context, state) {
         return BaseViewWidget(
@@ -27,6 +28,7 @@ class MenuItemView extends StatelessWidget {
                   state.asMenuItem.title,
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: context.theme.colorScheme.onPrimary,
+                        fontWeight: FontWeight.bold,
                       ),
                   textAlign: TextAlign.center,
                 ),
@@ -42,18 +44,18 @@ class MenuItemView extends StatelessWidget {
                 Text(
                   '\$${state.asMenuItem.type.overallPrice!}',
                   textAlign: TextAlign.center,
-                  style: context.theme.textTheme.headlineSmall,
+                  style: context.theme.textTheme.headlineMedium,
                 ),
               if (state.asMenuItem.type.servedWith != null)
                 Text(
                   state.asMenuItem.type.servedWith!,
                   textAlign: TextAlign.center,
-                  style: context.theme.textTheme.titleMedium,
+                  style: context.theme.textTheme.headlineSmall,
                 ),
               if (state.asMenuItem.type.upgrades != null)
                 Text(
-                  'Upgrade Available - ${state.asMenuItem.type.upgrades!.details!}',
-                  style: context.theme.textTheme.titleMedium,
+                  'Upgrades - ${state.asMenuItem.type.upgrades!.details!}',
+                  style: context.theme.textTheme.headlineSmall,
                   textAlign: TextAlign.center,
                 ),
               if (state.asMenuItem.type.options != null &&

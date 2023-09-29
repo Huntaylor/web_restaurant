@@ -20,6 +20,14 @@ class OverviewWidget extends StatelessWidget {
       child: Container(
         width: 250,
         decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              context.theme.colorScheme.primaryContainer,
+              context.theme.colorScheme.secondaryContainer,
+            ],
+          ),
           borderRadius: BorderRadius.circular(5),
           color: context.theme.colorScheme.primaryContainer,
         ),
@@ -29,6 +37,7 @@ class OverviewWidget extends StatelessWidget {
             title,
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   color: context.theme.colorScheme.onPrimaryContainer,
+                  fontWeight: FontWeight.bold,
                 ),
             textAlign: TextAlign.center,
           ),

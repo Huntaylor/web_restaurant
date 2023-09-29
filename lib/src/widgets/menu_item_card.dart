@@ -26,12 +26,18 @@ class MenuItemCard extends StatelessWidget {
             Text(
               type.name!,
               textAlign: TextAlign.center,
+              style: context.theme.textTheme.headlineMedium,
             ),
-            if (type.price != null) Text('\$${type.price!}'),
+            if (type.price != null)
+              Text(
+                '\$${type.price!}',
+                style: context.theme.textTheme.headlineSmall,
+              ),
             if (type.comesWith != null)
               Text(
                 'Comes with: ${type.comesWith!}',
                 textAlign: TextAlign.center,
+                style: context.theme.textTheme.titleLarge,
               ),
             if (type.combos != null)
               CombosWidget(

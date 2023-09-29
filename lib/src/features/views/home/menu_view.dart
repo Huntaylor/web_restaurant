@@ -28,25 +28,21 @@ class MenuView extends StatelessWidget {
             mainAxisSpacing: 8,
             crossAxisSpacing: 8,
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 8),
           itemCount: state.asInitial.menu.data.length,
           itemBuilder: (context, index) {
             final nameList = state.asInitial.menu.data.keys.toList();
             final menuItems = state.asInitial.menu.data.values.toList();
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              child: GestureDetector(
-                onTap: () {
-                  mainContext.read<MenuCubit>().selectItem(
-                        title: nameList[index],
-                        type: menuItems[index],
-                      );
-                  mainContext.push(Paths.home.menuItemView.path);
-                },
-                child: OverviewWidget(
-                  title: nameList[index],
-                  type: menuItems[index],
-                ),
+            return GestureDetector(
+              onTap: () {
+                mainContext.read<MenuCubit>().selectItem(
+                      title: nameList[index],
+                      type: menuItems[index],
+                    );
+                mainContext.push(Paths.home.menuItemView.path);
+              },
+              child: OverviewWidget(
+                title: nameList[index],
+                type: menuItems[index],
               ),
             );
           },
